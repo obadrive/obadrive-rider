@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "476856846993",
+    "project_id": "obadrive-102a6",
+    "storage_bucket": "obadrive-102a6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476856846993:android:82552b9ed552f644fb0d30",
+        "android_client_info": {
+          "package_name": "com.ovosolution.ovoridedriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476856846993-1mgi5045crd4oqs8luvjvdsutfr69d1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlr1yhXQkzC49cLhB7xC8SValIINAI28E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476856846993-1mgi5045crd4oqs8luvjvdsutfr69d1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476856846993-mbvmtm7vgn6dbo3cu359lcj5tcqgce3q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ovosolution.ovoridedriver"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476856846993:android:ab4ac4b547348f89fb0d30",
+        "android_client_info": {
+          "package_name": "com.ovosolution.ovorideuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476856846993-1mgi5045crd4oqs8luvjvdsutfr69d1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlr1yhXQkzC49cLhB7xC8SValIINAI28E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476856846993-1mgi5045crd4oqs8luvjvdsutfr69d1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476856846993-mbvmtm7vgn6dbo3cu359lcj5tcqgce3q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ovosolution.ovoridedriver"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
