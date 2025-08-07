@@ -21,6 +21,7 @@ import 'package:ovorideuser/presentation/components/text-form-field/custom_text_
 import 'package:ovorideuser/presentation/components/text/label_text.dart';
 import 'package:ovorideuser/presentation/components/will_pop_widget.dart';
 import 'package:ovorideuser/presentation/screens/auth/registration/widget/country_bottom_sheet.dart';
+import 'package:ovorideuser/presentation/screens/auth/registration/widget/city_bottom_sheet.dart';
 
 class ProfileCompleteScreen extends StatefulWidget {
   const ProfileCompleteScreen({super.key});
@@ -332,6 +333,7 @@ class _ProfileCompleteScreenState extends State<ProfileCompleteScreen> {
                                       return;
                                     },
                                   ),
+                                  //aaa
                                   const SizedBox(
                                     height: Dimensions.space20,
                                   ),
@@ -352,19 +354,55 @@ class _ProfileCompleteScreenState extends State<ProfileCompleteScreen> {
                                   const SizedBox(
                                     height: Dimensions.space20,
                                   ),
-                                  CustomTextField(
-                                    animatedLabel: false,
-                                    needOutlineBorder: true,
-                                    labelText: MyStrings.city.tr,
-                                    hintText: "${MyStrings.enterYour.tr} ${MyStrings.city.toLowerCase().tr}",
-                                    textInputType: TextInputType.text,
-                                    inputAction: TextInputAction.next,
-                                    focusNode: controller.cityFocusNode,
-                                    controller: controller.cityController,
-                                    nextFocus: controller.zipCodeFocusNode,
-                                    onChanged: (value) {
-                                      return;
+                                  LabelText(
+                                    text: MyStrings.city.tr,
+                                    isRequired: true,
+                                  ),
+                                  const SizedBox(
+                                    height: Dimensions.textToTextSpace,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      CityBottomSheet.bottomSheet(context, controller);
                                     },
+                                    child: Container(
+                                      width: double.infinity,
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: Dimensions.space15,
+                                        vertical: Dimensions.space12,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: MyColor.colorWhite,
+                                        border: Border.all(
+                                          color: MyColor.primaryColor.withValues(
+                                            alpha: 0.08,
+                                          ),
+                                        ),
+                                        borderRadius: BorderRadius.circular(
+                                          Dimensions.mediumRadius,
+                                        ),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            controller.selectedCity.isEmpty
+                                                ? "${MyStrings.enterYour.tr} ${MyStrings.city.toLowerCase().tr}"
+                                                : controller.selectedCity,
+                                            style: regularMediumLarge.copyWith(
+                                              fontSize: Dimensions.fontOverLarge,
+                                              color: controller.selectedCity.isEmpty
+                                                  ? MyColor.getBodyTextColor()
+                                                  : MyColor.getTextColor(),
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.keyboard_arrow_down_rounded,
+                                            color: MyColor.getBodyTextColor(),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                   const SizedBox(
                                     height: Dimensions.space20,
