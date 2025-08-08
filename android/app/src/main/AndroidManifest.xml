@@ -17,7 +17,7 @@
     </queries>
     
     <application
-        android:label="Obadrive Passageiro"
+        android:label="Obadrive"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true"

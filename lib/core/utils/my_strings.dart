@@ -1,1026 +1,1038 @@
 import 'package:ovorideuser/data/model/language/language_model.dart';
 
 class MyStrings {
-  //APP Name
+  // Nome do aplicativo
   static const String appName = "OvoRide";
 
-  //Onboard
-  static const String continue_ = "Continue";
+  // Onboard
+  static const String continue_ = "Continuar";
 
-  static const String onboardTitle1 = "Check bid rate book a ride"; //Title 1
+  static const String onboardTitle1 = "Verifique a taxa de oferta e reserve uma viagem"; // Título 1
 
-  static const String onboardDescription1 = "User can set their bid amount for their destination, driver bid depend on user bid amount , if user satisfy they can book ride.";
+  static const String onboardDescription1 = "O usuário pode definir o valor da sua oferta para o destino, o motorista faz a oferta com base no valor do usuário, se o usuário estiver satisfeito, pode reservar a viagem.";
 
-  static const String onboardTitle2 = "City to City Ride Service"; //Title 2
+  static const String onboardTitle2 = "Serviço de Viagem de Cidade a Cidade"; // Título 2
 
-  static const String onboardDescription2 = "A city-to-city ride service, sometimes referred to as an intercity or long-distance ride service";
+  static const String onboardDescription2 = "Um serviço de viagem de cidade a cidade, às vezes chamado de serviço intermunicipal ou de longa distância";
 
-  static const String onboardTitle3 = "Safe and Secure Rides"; //Title 3
+  static const String onboardTitle3 = "Viagens Seguras e Protegidas"; // Título 3
 
-  static const String onboardDescription3 = "Every trip is backed by safety features and driver verification, ensuring peace of mind from start to finish.";
+  static const String onboardDescription3 = "Cada viagem é respaldada por recursos de segurança e verificação do motorista, garantindo tranquilidade do início ao fim.";
 
-  static const String loginScreenTitle = "Ready to GO?";
+  static const String loginScreenTitle = "Pronto para Ir?";
 
-  static const String loginScreenSubTitle = "Login to find your next ride and make every journey memorable";
+  static const String loginScreenSubTitle = "Faça login para encontrar sua próxima viagem e tornar cada jornada memorável";
 
-  static const String regScreenTitle = "Join the Journey";
+  static const String regScreenTitle = "Junte-se à Jornada";
 
-  static const String regScreenSubTitle = "Register to start exploring convenient rides, whenever you need them";
+  static const String regScreenSubTitle = "Registre-se para começar a explorar viagens convenientes, sempre que precisar";
 
-  static const String selectService = "Select a service";
+  static const String selectService = "Selecione um serviço";
 
-  static const String selectDestination = "Select Destination";
-  static const String distanceALartTitle = "Distance Alert!";
-  static const String distanceALartMsg = "Please select your destination Minimum distance";
+  static const String selectDestination = "Selecione o Destino";
+  static const String distanceALartTitle = "Alerta de Distância!";
+  static const String distanceALartMsg = "Por favor, selecione seu destino com distância mínima";
 
-  static const String enterLocation = "Let's take a ride";
+  static const String enterLocation = "Vamos fazer uma viagem";
 
-  static const String fileNotFound = "File Not Found";
+  static const String fileNotFound = "Arquivo Não Encontrado";
 
-  static const String destination = "Destination";
+  static const String destination = "Destino";
 
-  static const String pickUpLocation = "Pickup Location";
+  static const String pickUpLocation = "Local de Embarque";
 
-  static const String pickUpDestination = "Pickup Destination";
+  static const String pickUpDestination = "Destino de Embarque";
 
-  static const String whereTo = "Where to go?";
+  static const String whereTo = "Para onde?";
 
-  static const String recommendedPrice = "Recommended price is {priceKey} approximately distance {distanceKey}";
+  static const String recommendedPrice = "O preço recomendado é {priceKey} para uma distância aproximada de {distanceKey}";
 
-  static const String when = "When";
+  static const String when = "Quando";
 
   static const String sos = "SOS";
 
-  static const String numOfPassengers = "Number of passengers";
+  static const String numOfPassengers = "Número de passageiros";
 
-  static const String offerYourRate = "Offer your rate";
+  static const String offerYourRate = "Ofereça sua tarifa";
 
-  static const String paymentMethod = 'Payment Method';
+  static const String paymentMethod = "Método de Pagamento";
 
-  static const String selectPaymentMethod = 'Select Payment Method';
+  static const String selectPaymentMethod = "Selecione o Método de Pagamento";
 
-  static const String commentOptional = 'Comment (optional)';
+  static const String commentOptional = "Comentário (opcional)";
 
-  static const String bookRide = "Book Ride";
+  static const String bookRide = "Reservar Viagem";
 
-  static const String ride = "Ride";
+  static const String ride = "Viagem";
 
-  static const String rides = "Rides";
+  static const String rides = "Viagens";
 
-  static const String ridesHistory = "Rides History";
+  static const String ridesHistory = "Histórico de Viagens";
 
-  static const String rideAmount = "Ride Amount";
+  static const String rideAmount = "Valor da Viagem";
 
-  static const String discount = "Discount";
+  static const String discount = "Desconto";
 
-  static const String rideSummary = "Ride Summary";
+  static const String rideSummary = "Resumo da Viagem";
 
-  static const String rideDetails = "Ride Details";
+  static const String rideDetails = "Detalhes da Viagem";
 
-  static const String runningRide = "Running Rides";
+  static const String runningRide = "Viagens em Andamento";
 
-  static const String newRide = "New Rides";
+  static const String newRide = "Novas Viagens";
 
-  static const String ridePlace = "Ride Place";
+  static const String ridePlace = "Local da Viagem";
 
-  static const String createdTime = "Created Time";
+  static const String createdTime = "Hora de Criação";
 
-  static const String rideCompleted = "Ride Completed";
+  static const String rideCompleted = "Viagem Concluída";
 
-  static const String rideCancel = "Ride Cancel";
+  static const String rideCancel = "Cancelar Viagem";
 
-  static const String activeRide = "Active Rides";
+  static const String activeRide = "Viagens Ativas";
 
-  static const String acceptRide = "Accept Ride";
+  static const String acceptRide = "Aceitar Viagem";
 
-  static const String acceptRequest = "Accept Request";
+  static const String acceptRequest = "Aceitar Solicitação";
 
-  static const String rejectRequest = "Reject Request";
+  static const String rejectRequest = "Rejeitar Solicitação";
 
-  static const String completeRides = "Complete Rides";
+  static const String completeRides = "Viagens Concluídas";
 
-  static const String cancelRide = "Cancel Ride";
+  static const String cancelRide = "Cancelar Viagem";
 
-  static const String cancelRides = "Cancel Rides";
+  static const String cancelRides = "Viagens Canceladas";
 
-  static const String addCouponCode = "Add Coupon Code";
+  static const String addCouponCode = "Adicionar Código de Cupom";
 
-  static const String applyCoupon = "Apply Coupon";
+  static const String applyCoupon = "Aplicar Cupom";
 
-  static const String apply = "Apply";
+  static const String apply = "Aplicar";
 
-  static const String or = "Or";
+  static const String or = "Ou";
 
-  static const String selectCoupon = "Select Coupon";
+  static const String selectCoupon = "Selecione o Cupom";
 
-  static const String minSpend = "Min spend";
+  static const String minSpend = "Gasto mínimo";
 
-  static const String referFriends = "Refer Friend";
+  static const String referFriends = "Indicar Amigo";
 
-  static const String referralAFriends = "Referral a friends";
+  static const String referralAFriends = "Indicar amigos";
 
-  static const String inviteFriends = "Invite Friend & Business";
+  static const String inviteFriends = "Convidar Amigo e Negócio";
 
-  static const String earn = "Earn";
+  static const String earn = "Ganhar";
 
-  static const String inviteRules1 = "Invite a friend";
+  static const String inviteRules1 = "Convide um amigo";
 
-  static const String inviteRules2 = "They register";
+  static const String inviteRules2 = "Eles se registram";
 
-  static const String inviteRules3 = "Get reward to complete First order.";
+  static const String inviteRules3 = "Receba recompensa ao completar o primeiro pedido";
 
-  static const String inbox = "Inbox";
+  static const String inbox = "Caixa de Entrada";
 
-  static const String message = "Message";
+  static const String message = "Mensagem";
 
-  static const String writeYourMessage = "Write your message";
+  static const String writeYourMessage = "Escreva sua mensagem";
 
-  static const String account = "Account";
+  static const String account = "Conta";
 
-  static const String profile = "Profile";
+  static const String profile = "Perfil";
 
-  static const String missYourHeres = "Miss you! Here`s";
+  static const String missYourHeres = "Saudades! Aqui está";
 
-  static const String off = "off";
+  static const String off = "desligado";
 
-  static const String getStarted = "Get Started";
+  static const String getStarted = "Começar";
 
-  static const String next = "Next";
+  static const String next = "Próximo";
 
-  static const String skip = "Skip";
+  static const String skip = "Pular";
 
-  static const String exOn = "Ex on";
+  static const String exOn = "Ex on"; // Mantido sem tradução devido à falta de contexto claro
 
-  static const String settingsAndSupport = "Settings & Support";
+  static const String settingsAndSupport = "Configurações e Suporte";
 
-  static const String codeApplied = "Code Applied!";
+  static const String codeApplied = "Código Aplicado!";
 
-  static const String removed = "Remove";
+  static const String removed = "Remover";
 
-  static const String reviewForDriver = "Review to Driver";
+  static const String reviewForDriver = "Avaliação para o Motorista";
 
-  static const String ratingDriver = "Rating Driver";
-  static const String ratingRequiredMsg = "Please type something about driver";
+  static const String ratingDriver = "Avaliando Motorista";
+  static const String ratingRequiredMsg = "Por favor, digite algo sobre o motorista";
 
-  static const String rateUs = "Rate Us";
+  static const String rateUs = "Avalie-nos";
 
-  static const String whatCouldBetter = "What could be better?";
+  static const String whatCouldBetter = "O que poderia ser melhor?";
 
-  static const String viewBids = "View Bids";
+  static const String viewBids = "Ver Ofertas";
 
-  static const String acceptBids = "Accept Ride";
+  static const String acceptBids = "Aceitar Viagem";
 
-  static const String review = "Review";
+  static const String review = "Avaliação";
 
   static const String otp = "OTP";
 
-  static const String delete = "Delete";
+  static const String delete = "Deletar";
 
-  static const String deleteAccount = "Delete Account";
+  static const String deleteAccount = "Deletar Conta";
 
-  static const String withdrawInformation = "Withdraw Information";
+  static const String withdrawInformation = "Informações de Saque";
 
-  static const String withdrawLimit = "Withdraw Limit";
+  static const String withdrawLimit = "Limite de Saque";
 
-  static const String withdrawConfirm = "Withdraw Confirm";
+  static const String withdrawConfirm = "Confirmar Saque";
 
-  static const String authorizationMethod = "Authorization Method";
+  static const String authorizationMethod = "Método de Autorização";
 
-  static const String selectAuthModeMsg = "Please select an authorization mode";
+  static const String selectAuthModeMsg = "Por favor, selecione um modo de autorização";
 
-  static const String fileDownloadAt = "File download at";
+  static const String fileDownloadAt = "Download do arquivo em";
 
-  static const String findDriver = "Find Driver";
+  static const String findDriver = "Encontrar Motorista";
 
-  static const String errorDownloadingFile = "Error downloading file";
+  static const String errorDownloadingFile = "Erro ao baixar arquivo";
 
-  static const String downloading = "Downloading";
+  static const String downloading = "Baixando";
 
-  static const String fileDownloadedSuccess = "File downloaded successfully";
+  static const String fileDownloadedSuccess = "Arquivo baixado com sucesso";
 
-  static const String remark = "Remark";
+  static const String remark = "Observação";
 
-  static const String any = "Any";
+  static const String any = "Qualquer";
 
-  static const String pay = "Pay";
+  static const String pay = "Pagar";
 
-  static const String signUp = "Sign Up";
+  static const String signUp = "Inscrever-se";
 
   static const String email = "Email";
 
-  static const String attachment = "Attachment";
+  static const String attachment = "Anexo";
 
-  static const String depositCharge = "Deposit Charge";
+  static const String depositCharge = "Taxa de Depósito";
 
-  static const String finalAmount = "Final Amount";
+  static const String finalAmount = "Valor Final";
 
-  static const String yes = "Yes";
+  static const String yes = "Sim";
 
-  static const String no = "No";
+  static const String no = "Não";
 
-  static const String trxNo = "Trx No";
+  static const String trxNo = "Nº da Transação";
 
-  static const String please = "Please";
+  static const String please = "Por favor";
 
-  static const String selectRemarks = "Select Remarks";
+  static const String selectRemarks = "Selecionar Observações";
 
-  static const String selectTrxType = "Select Trx Type";
+  static const String selectTrxType = "Selecionar Tipo de Transação";
 
-  static const String beforeCharge = "Before Charge";
+  static const String beforeCharge = "Antes da Taxa";
 
-  static const String remainingBalance = "Remaining Balance";
+  static const String remainingBalance = "Saldo Restante";
 
-  static const String enterTransactionNo = "Enter transaction no.";
+  static const String enterTransactionNo = "Insira o número da transação";
 
-  static const String latestPayments = "Latest Payments";
+  static const String latestPayments = "Últimos Pagamentos";
 
-  static const String username = "Username";
+  static const String username = "Nome de Usuário";
 
-  static const String password = "Password";
+  static const String password = "Senha";
 
-  static const String rememberMe = "Remember Me";
+  static const String rememberMe = "Lembrar-me";
 
-  static const String forgotPassword = "Forgot Password?";
+  static const String forgotPassword = "Esqueceu a Senha?";
 
-  static const String signIn = "Sign In";
+  static const String signIn = "Entrar";
 
-  static const String firstName = "First Name";
+  static const String firstName = "Primeiro Nome";
 
-  static const String lastName = "Last Name";
+  static const String lastName = "Sobrenome";
 
-  static const String last = "Last";
+  static const String last = "Último";
 
-  static const String country = "Country";
+  static const String country = "País";
 
-  static const String receipt = "Receipt";
+  static const String receipt = "Recibo";
 
-  static const String backToHome = 'Back Home';
+  static const String backToHome = "Voltar para o Início";
 
-  static const String kycData = "KYC Data";
+  static const String kycData = "Dados KYC";
 
-  static const String confirmPassword = "Confirm Password";
+  static const String confirmPassword = "Confirmar Senha";
 
-  static const String referanceName = "Reference Name";
+  static const String referanceName = "Nome de Referência";
 
-  static const String referralNameOptional = "Reference Name(optional)";
+  static const String referralNameOptional = "Nome de Referência (opcional)";
 
-  static const String loading = "Loading";
+  static const String loading = "Carregando";
 
-  static const String alreadyAccount = "Already have an account?";
+  static const String alreadyAccount = "Já tem uma conta?";
 
-  static const String address = "Address";
+  static const String address = "Endereço";
 
-  static const String kyc = 'KYC';
+  static const String kyc = "KYC";
 
-  static const String isRequired = 'is required';
+  static const String isRequired = "é obrigatório";
 
-  static const String confirm = 'Confirm';
+  static const String confirm = "Confirmar";
 
-  static const String chooseFile = 'Choose File';
+  static const String chooseFile = "Escolher Arquivo";
 
-  static const String kycUnderReviewMsg = 'Your KYC is under review';
+  static const String kycUnderReviewMsg = "Seu KYC está sob revisão";
 
-  static const String kycVerificationRequired = "KYC Verification Required";
+  static const String kycVerificationRequired = "Verificação KYC Necessária";
 
-  static const String kycVerificationMsg = "Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any ride request.";
+  static const String kycVerificationMsg = "Por favor, envie as informações KYC necessárias para verificar-se. Caso contrário, você não poderá fazer nenhuma solicitação de viagem.";
 
-  static const String kycPendingMsg = "Thank you for submitting your KYC documents. Our team is currently reviewing the information.";
+  static const String kycPendingMsg = "Obrigado por enviar seus documentos KYC. Nossa equipe está atualmente revisando as informações.";
 
-  static const String kycAlreadyVerifiedMsg = 'You are already verified';
+  static const String kycAlreadyVerifiedMsg = "Você já está verificado";
 
-  static const String verify = "Verify";
+  static const String verify = "Verificar";
 
-  static const String withdraw = "Withdrawals";
+  static const String withdraw = "Saques";
 
-  static const String seeAll = "See All";
+  static const String seeAll = "Ver Todos";
 
-  static const String allRides = "All Ride";
+  static const String allRides = "Todas as Viagens";
 
-  static const String home = "Home";
+  static const String home = "Início";
 
-  static const String payment = "Payment";
+  static const String payment = "Pagamento";
 
-  static const String transactionId = "Payment ID";
+  static const String transactionId = "ID do Pagamento";
 
-  static const String withdrawHistory = "Withdraw History";
+  static const String withdrawHistory = "Histórico de Saques";
 
-  static const String totalBalance = "Total Balance";
+  static const String totalBalance = "Saldo Total";
 
-  static const String amount = "Amount";
+  static const String amount = "Valor";
 
-  static const String topUp = "TopUp";
+  static const String topUp = "Recarregar";
 
-  static const String topUpWallet = "Topup Wallet";
+  static const String topUpWallet = "Recarregar Carteira";
 
-  static const String addTopUpAmount = "Add Topup Amount";
+  static const String addTopUpAmount = "Adicionar Valor de Recarga";
 
-  static const String date = "Date";
+  static const String date = "Data";
 
-  static const String charge = "Charge";
+  static const String charge = "Taxa";
 
-  static const String payableAmount = "Payable Amount";
+  static const String payableAmount = "Valor a Pagar";
 
-  static const String payable = "Payable";
+  static const String payable = "A Pagar";
 
-  static const String withdrawMoney = "Withdraw Money";
+  static const String withdrawMoney = "Sacar Dinheiro";
 
-  static const String resetPassword = "Reset Password";
+  static const String resetPassword = "Redefinir Senha";
 
-  static const String subText = "Your new password must different form \nprevious used passwords";
+  static const String subText = "Sua nova senha deve ser diferente das senhas usadas anteriormente";
 
-  static const String newPassword = "New Password";
+  static const String newPassword = "Nova Senha";
 
-  static const String newPasswordHint = "Enter new password";
+  static const String newPasswordHint = "Insira a nova senha";
 
-  static const String changePassword = "Change Password";
+  static const String changePassword = "Alterar Senha";
 
-  static const String currentPassword = "Current Password";
+  static const String currentPassword = "Senha Atual";
 
-  static const String submit = "Submit";
+  static const String submit = "Enviar";
 
-  static const String done = "Done";
+  static const String done = "Concluído";
 
-  static const String pleaseFillUpAllOfTheFields = "Please fill up all of the fields";
+  static const String pleaseFillUpAllOfTheFields = "Por favor, preencha todos os campos";
 
-  static const String name = "Name";
+  static const String name = "Nome";
 
-  static const String fullName = "Full Name";
+  static const String fullName = "Nome Completo";
 
-  static const String phone = "Phone";
+  static const String phone = "Telefone";
 
-  static const String phoneNumber = "Phone Number";
+  static const String phoneNumber = "Número de Telefone";
 
-  static const String zipCode = "Zip Code";
+  static const String zipCode = "CEP";
 
-  static const String state = "State";
+  static const String state = "Estado";
 
-  static const String city = "City";
+  static const String city = "Cidade";
 
-  static const String interCity = "Intercity";
+  static const String interCity = "Intermunicipal";
 
-  static const String interCity_ = 'Intercity';
+  static const String interCity_ = "Intermunicipal";
 
-  static const String accountAndSettings = "Account & Settings";
+  static const String accountAndSettings = "Conta e Configurações";
 
-  static const String referralSubtitle = "Invite to signup using your link and you will get";
+  static const String referralSubtitle = "Convide para se inscrever usando seu link e você receberá";
 
-  static const String firstOrder = "first order";
+  static const String firstOrder = "primeiro pedido";
 
-  static const String editProfile = "Edit Profile";
+  static const String editProfile = "Editar Perfil";
 
-  static const String updateProfile = "Update Profile";
+  static const String updateProfile = "Atualizar Perfil";
 
-  static const String selectALanguage = 'Select Language';
+  static const String selectALanguage = "Selecionar Idioma";
 
-  static const String twoFactorAuth = 'Two Factor Authentication';
+  static const String twoFactorAuth = "Autenticação de Dois Fatores";
 
-  static const String twoFactorMsg = 'Enter 6-digit code from your two factor authenticator APP.';
+  static const String twoFactorMsg = "Insira o código de 6 dígitos do seu aplicativo de autenticação de dois fatores.";
 
-  static const String exitTitle = "Are you sure you want to exit the app?";
+  static const String exitTitle = "Você tem certeza de que deseja sair do aplicativo?";
 
-  static const String hasUpperLetter = "Has uppercase letter";
+  static const String hasUpperLetter = "Tem letra maiúscula";
 
-  static const String hasLowerLetter = "Has lowercase letter";
+  static const String hasLowerLetter = "Tem letra minúscula";
 
-  static const String hasDigit = "Has digit";
+  static const String hasDigit = "Tem dígito";
 
-  static const String hasSpecialChar = "Has special character";
+  static const String hasSpecialChar = "Tem caractere especial";
 
-  static const String minSixChar = "Min of 6 characters";
+  static const String minSixChar = "Mínimo de 6 caracteres";
 
-  static const String receivable = 'Receivable';
+  static const String receivable = "A Receber";
 
-  static const String conversionRate = 'Conversion Rate';
+  static const String conversionRate = "Taxa de Conversão";
 
-  static const String in_ = 'In';
+  static const String in_ = "Em";
 
-  static const String initiated = 'Initiated';
+  static const String initiated = "Iniciado";
 
-  static const String recoverAccount = "Recover Account";
+  static const String recoverAccount = "Recuperar Conta";
 
-  static const String usernameOrEmail = "Username or Email";
+  static const String usernameOrEmail = "Nome de Usuário ou Email";
 
-  static const String usernameOrEmailHint = "Enter your username or email";
+  static const String usernameOrEmailHint = "Insira seu nome de usuário ou email";
 
-  static const String createAccount = "Create an account";
+  static const String createAccount = "Criar uma conta";
 
-  static const String fieldErrorMsg = "Please fill out this field";
+  static const String fieldErrorMsg = "Por favor, preencha este campo";
 
-  static const String resetPassContent = "To secure your account please provide a secure password";
+  static const String resetPassContent = "Para proteger sua conta, forneça uma senha segura";
 
-  static const String forgetPasswordSubText = "Enter your email or username below to receive a password reset verification code";
+  static const String forgetPasswordSubText = "Insira seu email ou nome de usuário abaixo para receber um código de verificação para redefinição de senha";
 
-  static const String verifyPasswordSubText = "A 6 digits verification code sent to your email address";
+  static const String verifyPasswordSubText = "Um código de verificação de 6 dígitos foi enviado para o seu endereço de email";
 
-  static const String phoneNo = "Phone No.";
+  static const String phoneNo = "Nº de Telefone";
 
-  static const String passwordResetEmailSentTo = 'Password reset email sent to';
+  static const String passwordResetEmailSentTo = "Email de redefinição de senha enviado para";
 
-  static const String emailVerification = "Email Verification";
+  static const String emailVerification = "Verificação de Email";
 
-  static const String viaEmailVerify = "We've sent you an access code via email for email verification";
+  static const String viaEmailVerify = "Enviamos um código de acesso via email para verificação de email";
 
-  static const String didNotReceiveCode = "Didn't receive code?";
+  static const String didNotReceiveCode = "Não recebeu o código?";
 
-  static const String resend = "Resend again";
+  static const String resend = "Reenviar novamente";
 
-  static const String verifyYourEmail = "Verify Your Email";
+  static const String verifyYourEmail = "Verifique Seu Email";
 
-  static const String verifyYourEmailSubTItle = "A verification  code has been send to";
+  static const String verifyYourEmailSubTItle = "Um código de verificação foi enviado para";
 
-  static const String resendCode = "Resend again";
+  static const String resendCode = "Reenviar novamente";
 
-  static const String smsVerification = "Sms Verification";
+  static const String smsVerification = "Verificação por SMS";
 
-  static const String profileComplete = "Profile Complete";
+  static const String profileComplete = "Perfil Completo";
 
-  static const String profileCompleteTitle = "Ready to Ride!";
+  static const String profileCompleteTitle = "Pronto para Viajar!";
 
-  static const String profileCompleteSubTitle = '''Complete Your Profile & Start Your Ride''';
+  static const String profileCompleteSubTitle = "Complete Seu Perfil e Comece Sua Viagem";
 
-  static const String enterYour = "Enter your";
+  static const String enterYour = "Insira seu";
 
-  static const String stayInCityToCity = "Stay in City to City";
+  static const String stayInCityToCity = "Fique na Cidade a Cidade";
 
-  static const String stayInCity = "Stay in City to City";
+  static const String stayInCity = "Fique na Cidade a Cidade";
 
-  static const String deposit = "Deposit";
+  static const String deposit = "Depósito";
 
-  static const String depositInfo = "Deposit Info";
+  static const String depositInfo = "Informações de Depósito";
 
-  static const String paymentHistory = "Payment History";
+  static const String paymentHistory = "Histórico de Pagamentos";
 
-  static const String recentTransactions = "Recent Payments";
+  static const String recentTransactions = "Pagamentos Recentes";
 
-  static const String depositHistory = 'Deposit History';
+  static const String depositHistory = "Histórico de Depósitos";
 
-  static const String postBalance = 'Post Balance';
+  static const String postBalance = "Saldo Posterior";
 
-  static const String details = 'Details';
+  static const String details = "Detalhes";
 
-  static const String wallet = "Wallet";
+  static const String wallet = "Carteira";
 
-  static const String myWallet = "My Wallet";
+  static const String myWallet = "Minha Carteira";
 
-  static const String type = "Type";
+  static const String type = "Tipo";
 
-  static const String theme = "Theme";
+  static const String theme = "Tema";
 
-  static const String language = "Language";
+  static const String language = "Idioma";
 
-  static const String transactionNo = "Transaction No.";
+  static const String transactionNo = "Nº da Transação";
 
-  static const String privacyPolicy = "Privacy & Policy";
+  static const String privacyPolicy = "Privacidade e Política";
 
-  static const String forgetPassword = "Forget Password";
+  static const String forgetPassword = "Esqueceu a Senha";
 
-  static const String doNotHaveAccount = "Don't have an account?";
+  static const String doNotHaveAccount = "Não tem uma conta?";
 
-  static const String enterEmailOrUserName = 'Enter username or email';
+  static const String enterEmailOrUserName = "Insira nome de usuário ou email";
 
-  static const String policies = 'Policies';
+  static const String policies = "Políticas";
 
-  static const String maxAttachmentError = 'Maximum 5 attachment can send';
+  static const String maxAttachmentError = "Máximo de 5 anexos podem ser enviados";
 
-  static const String verificationFailed = 'Verification failed';
+  static const String verificationFailed = "Verificação falhou";
 
-  static const String emailVerificationFailed = 'Email verification failed';
+  static const String emailVerificationFailed = "Verificação de email falhou";
 
-  static const String emailVerificationSuccess = 'Email verification success';
+  static const String emailVerificationSuccess = "Verificação de email bem-sucedida";
 
-  static const String enterYourPassword_ = 'Enter your password';
+  static const String enterYourPassword_ = "Insira sua senha";
 
-  static const String noDataToShow = 'Sorry! there are no data to show';
+  static const String noDataToShow = "Desculpe! Não há dados para mostrar";
 
-  static const String noData = 'No data found';
+  static const String noData = "Nenhum dado encontrado";
 
-  static const String payment_ = 'Payment';
+  static const String payment_ = "Pagamento";
 
-  static const String searchCountry = "Search country";
+  static const String searchCountry = "Pesquisar país";
 
-  static const String paymentNow = 'Payment Now';
+  static const String paymentNow = "Pagar Agora";
 
-  static const String iAgreeWith = "I agree with the";
+  static const String iAgreeWith = "Eu concordo com o";
 
-  static const String createNewPassword = "Create new password";
+  static const String createNewPassword = "Criar nova senha";
 
-  static const String createPasswordSubText = "Please provide a strong password to protect your account";
+  static const String createPasswordSubText = "Por favor, forneça uma senha forte para proteger sua conta";
 
-  static const String enterCurrentPassword = 'Enter current password';
+  static const String enterCurrentPassword = "Insira a senha atual";
 
-  static const String enterNewPassword = 'Enter new password';
+  static const String enterNewPassword = "Insira a nova senha";
 
-  static const String enterConfirmPassword = 'Enter confirm password';
+  static const String enterConfirmPassword = "Insira a senha de confirmação";
 
-  static const String addWithdraw = "Add withdraw";
+  static const String addWithdraw = "Adicionar Saque";
 
-  static const String enterAmount = "Enter amount";
+  static const String enterAmount = "Insira o Valor";
 
-  static const String enterAmountMsg = "Please enter an amount";
+  static const String enterAmountMsg = "Por favor, insira um valor";
 
-  static const String hint = "0.0";
+  static const String hint = "0,0";
 
   static const String google = "Google";
 
-  static const String regGoogle = "Continue with Google";
+  static const String regGoogle = "Continuar com Google";
 
-  static const String withdrawMethod = "Withdraw Method";
+  static const String withdrawMethod = "Método de Saque";
 
-  static const String withdrawMethodEdit = "Withdraw Method Edit";
+  static const String withdrawMethodEdit = "Editar Método de Saque";
 
-  static const String withdrawPreview = "Withdraw Preview";
+  static const String withdrawPreview = "Pré-visualização do Saque";
 
-  static const String searchByTrxId = "Search by trx id";
+  static const String searchByTrxId = "Pesquisar por ID da transação";
 
-  static const String noTrxFound = "No transaction found";
+  static const String noTrxFound = "Nenhuma transação encontrada";
 
-  static const String trxId = "Trx Id";
+  static const String trxId = "ID da Transação";
 
-  static const String complete = "Completed";
+  static const String complete = "Concluída";
 
-  static const String cancel = "Cancel";
+  static const String cancel = "Cancelar";
 
-  static const String call = "Call";
+  static const String call = "Chamada";
 
-  static const String time = "Time";
+  static const String time = "Hora";
 
-  static const String bankName = "Bank Name";
+  static const String bankName = "Nome do Banco";
 
-  static const String accountName = "Account Name";
+  static const String accountName = "Nome da Conta";
 
-  static const String accountNumber = "Account Number";
+  static const String accountNumber = "Número da Conta";
 
-  static const String routingNumber = "Routing Number";
+  static const String routingNumber = "Número de Roteamento";
 
-  static const String payNow = "PAY NOW";
+  static const String payNow = "PAGAR AGORA";
 
-  static const String noDepositFound = "No deposit found";
+  static const String noDepositFound = "Nenhum depósito encontrado";
 
-  static const String noWithdrawFound = "No withdraw found";
+  static const String noWithdrawFound = "Nenhum saque encontrado";
 
-  static const String otpVerification = "OTP verification";
+  static const String otpVerification = "Verificação OTP";
 
-  static const String showMore = "Show more";
+  static const String showMore = "Mostrar mais";
 
-  static const String more = "More";
+  static const String more = "Mais";
 
   static const String success = 'success';
 
-  static const String version = 'Version';
+  static const String version = "Versão";
 
-  static const String logoutSuccessMsg = 'Sign out successfully';
+  static const String logoutSuccessMsg = "Saída realizada com sucesso";
 
-  static const String invalidEmailMsg = "Enter valid email";
+  static const String invalidEmailMsg = "Insira um email válido";
 
-  static const String enterCurrentPass = "Enter your current password";
+  static const String enterCurrentPass = "Insira sua senha atual";
 
-  static const String enterNewPass = "Enter your new password";
+  static const String enterNewPass = "Insira sua nova senha";
 
-  static const String invalidPassMsg = "Password must be contain 1 special character and number";
+  static const String invalidPassMsg = "A senha deve conter 1 caractere especial e número";
 
-  static const String kMatchPassError = "Password doesn't match";
+  static const String kMatchPassError = "As senhas não coincidem";
 
-  static const String kFirstNameNullError = "Enter first name";
+  static const String kFirstNameNullError = "Insira o primeiro nome";
 
-  static const String kLastNameNullError = "Enter last name";
+  static const String kLastNameNullError = "Insira o sobrenome";
 
-  static const String kShortUserNameError = "Username must be 6 character";
+  static const String kShortUserNameError = "O nome de usuário deve ter 6 caracteres";
 
-  static const String passVerification = 'Password Verification';
+  static const String passVerification = "Verificação de Senha";
 
-  static const String successfullyCodeResend = 'Resend the code successfully';
+  static const String successfullyCodeResend = "Código reenviado com sucesso";
 
-  static const String resendCodeFail = 'Failed to resend code';
+  static const String resendCodeFail = "Falha ao reenviar código";
 
-  static const String somethingWentWrong = 'Something went wrong';
+  static const String somethingWentWrong = "Algo deu errado";
 
-  static const String invalidAmount = 'Invalid amount';
+  static const String invalidAmount = "Valor inválido";
 
-  static const String verificationSuccess = 'Verification success';
+  static const String verificationSuccess = "Verificação bem-sucedida";
 
-  static const String enterYourUsername = 'Enter your username';
+  static const String enterYourUsername = "Insira seu nome de usuário";
 
-  static const String enterYourEmail = 'Enter your email';
+  static const String enterYourEmail = "Insira seu email";
 
-  static const String enterYourPhoneNumber = "Enter your phone number";
+  static const String enterYourPhoneNumber = "Insira seu número de telefone";
 
-  static const String enterPhoneNumber = "Enter phone number";
+  static const String enterPhoneNumber = "Insira o número de telefone";
 
   static const String enterPhoneNumber000 = "000-000";
 
-  static const String confirmYourPassword = 'Confirm your password';
+  static const String confirmYourPassword = "Confirme sua senha";
 
-  static const String noCodeReceive = "Didn't receive the code?";
+  static const String noCodeReceive = "Não recebeu o código?";
 
-  static const String smsVerificationMsg = "We've sent you an access code to your phone number for SMS verification";
+  static const String smsVerificationMsg = "Enviamos um código de acesso para o seu número de telefone para verificação por SMS";
 
-  static const String selectACountry = "Select a country";
+  static const String selectACountry = "Selecione um país";
 
-  static const String requestFail = "Request failed";
+  static const String requestFail = "Solicitação falhou";
 
-  static const String requestSuccess = "Request success";
+  static const String requestSuccess = "Solicitação bem-sucedida";
 
-  static const String loginFailedTryAgain = 'Login failed,please try again';
+  static const String loginFailedTryAgain = "Login falhou, por favor tente novamente";
 
-  static const String selectOne = "Select one";
+  static const String selectOne = "Selecione um";
 
   static const String plusText = "+";
 
-  static const String sms = 'SMS';
+  static const String sms = "SMS";
 
-  static const String noInternet = 'No internet connection';
+  static const String noInternet = "Sem conexão com a internet";
 
-  static const String retry = "Retry";
+  static const String retry = "Tentar Novamente";
 
-  static const String otpFieldEmptyMsg = "Otp field can't be empty";
+  static const String otpFieldEmptyMsg = "O campo OTP não pode estar vazio";
 
-  static const String goBackLogMsg = 'Sorry something went wrong here, go back and retry after sometimes';
+  static const String goBackLogMsg = "Desculpe, algo deu errado aqui, volte e tente novamente após algum tempo";
 
-  static const String secondAgo = 'second ago';
+  static const String secondAgo = "segundo atrás";
 
-  static const String minutesAgo = 'minutes ago';
+  static const String minutesAgo = "minutos atrás";
 
-  static const String hourAgo = 'hour ago';
+  static const String hourAgo = "hora atrás";
 
-  static const String daysAgo = 'days ago';
+  static const String daysAgo = "dias atrás";
 
-  static const String justNow = 'just now';
+  static const String justNow = "agora mesmo";
 
-  static const String logout = "Logout";
+  static const String logout = "Sair";
 
-  static const String signOut = "Sign Out";
+  static const String signOut = "Sair";
 
   static const String menu = "Menu";
 
-  static const String badResponseMsg = 'Bad response format!';
+  static const String badResponseMsg = "Formato de resposta ruim!";
 
-  static const String serverError = 'Server error';
+  static const String serverError = "Erro do servidor";
 
-  static const String unAuthorized = 'Unauthorized';
+  static const String unAuthorized = "Não autorizado";
 
-  static const String yourEmail = 'your email';
+  static const String yourEmail = "seu email";
 
-  static const String passwordChanged = "Password change successfully";
+  static const String passwordChanged = "Senha alterada com sucesso";
 
-  static const String topUpLimit = "Topup limit";
+  static const String topUpLimit = "Limite de recarga";
 
-  static const String share = "Share";
+  static const String share = "Compartilhar";
 
-  static const String error = 'Error';
+  static const String error = "Erro";
 
-  static const String trxType = 'Trx Type';
+  static const String trxType = "Tipo de Transação";
 
-  static const String approved = "Approved";
+  static const String approved = "Aprovado";
 
-  static const String succeed = "Succeed";
+  static const String succeed = "Bem-sucedido";
 
-  static const String rejected = "Rejected";
+  static const String rejected = "Rejeitado";
 
-  static const String departureDate = "Departure Date";
+  static const String departureDate = "Data de Partida";
 
-  static const String departureTime = "Departure Time";
+  static const String departureTime = "Hora de Partida";
 
-  static const String paymentType = "Payment Type";
+  static const String paymentType = "Tipo de Pagamento";
 
-  static const String remarkType = "Remark Type";
+  static const String remarkType = "Tipo de Observação";
 
-  static const String agreePolicyMessage = "You must agree with our privacy & policies";
+  static const String agreePolicyMessage = "Você deve concordar com nossa privacidade e políticas";
 
-  static const String myLocation = "My location";
+  static const String myLocation = "Minha localização";
 
-  static const String locationServiceDisableMsg = "Location services are disabled. Please enable the services";
+  static const String locationServiceDisableMsg = "Os serviços de localização estão desativados. Por favor, ative os serviços";
 
-  static const String locationPermissionDenied = "Location permissions are denied";
+  static const String locationPermissionDenied = "As permissões de localização foram negadas";
 
-  static const String locationPermissionPermanentDenied = "Location permissions are permanently denied, we cannot request permissions.";
+  static const String locationPermissionPermanentDenied = "As permissões de localização foram permanentemente negadas, não podemos solicitar permissões.";
 
-  static const String tapOnLocationPicker = "Tap on location picker";
-  static const String setYourLocationPerfectly = "Set Your Location Perfectly";
-  static const String zoomInToSetExactLocation = "Zoom in to set the exact location";
+  static const String tapOnLocationPicker = "Toque no seletor de localização";
 
-  static const String tips = "Tips";
+  static const String setYourLocationPerfectly = "Defina Sua Localização Perfeitamente";
 
-  static const String searchYourLocation = "Search your location";
+  static const String zoomInToSetExactLocation = "Aumente o zoom para definir a localização exata";
 
-  static const String yourTrip = "Your trip";
+  static const String tips = "Dicas";
 
-  static const String selectLocation = "Select location";
+  static const String searchYourLocation = "Pesquisar sua localização";
 
-  static const String confirmLocation = "Confirm Location";
+  static const String yourTrip = "Sua viagem";
 
-  static const String pickLocation = "Pick Location";
+  static const String selectLocation = "Selecionar localização";
 
-  static const String cancelReason = "Cancel Reason";
+  static const String confirmLocation = "Confirmar Localização";
 
-  static const String invalidDateMsg = "Select a valid date";
+  static const String pickLocation = "Escolher Localização";
 
-  static const String pleaseSelectAService = "Please select a service";
+  static const String cancelReason = "Motivo do Cancelamento";
 
-  static const String pleaseSelectPickupAndDestination = "Please select your pickup and destination location";
+  static const String invalidDateMsg = "Selecione uma data válida";
 
-  static RegExp emailValidatorRegExp = RegExp(
-    r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
-  );
+  static const String pleaseSelectAService = "Por favor, selecione um serviço";
 
-  static const String successfullyCopiedToClipboard = "Successfully copied to clipboard";
+  static const String pleaseSelectPickupAndDestination = "Por favor, selecione seu local de embarque e destino";
 
-  static const String rideRules = "Ride Rules";
+  static RegExp emailValidatorRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+"); // Não traduzido, pois é uma expressão regular
 
-  static const String selectRideRules = "Select Ride Rules";
+  static const String successfullyCopiedToClipboard = "Copiado com sucesso para a área de transferência";
 
-  static const String selectedRideRules = "Selected Ride Rules";
+  static const String rideRules = "Regras da Viagem";
 
-  static const String otpSentToYourMobile = "An OTP has been sent to your mobile number";
+  static const String selectRideRules = "Selecionar Regras da Viagem";
 
-  static const String pleaseEnterValidOtpCode = "Please Enter Valid OTP Code";
+  static const String selectedRideRules = "Regras da Viagem Selecionadas";
 
-  static const String tryAfterSec = "Try After {sec} Second";
+  static const String otpSentToYourMobile = "Um OTP foi enviado para o seu número de celular";
 
-  static const String reviewForUser = "Review for user";
+  static const String pleaseEnterValidOtpCode = "Por favor, insira um código OTP válido";
 
-  static const String ratingUser = "Rating User";
+  static const String tryAfterSec = "Tente Após {sec} Segundo";
 
-  static const String verifyYourPhone = "Verify Your Phone Number";
+  static const String reviewForUser = "Avaliação para o usuário";
 
-  static const String codeHasBeenSendTo = "Code has been send to";
+  static const String ratingUser = "Avaliando Usuário";
 
-  static const String reviewMsgHintText = "write your journey experience";
+  static const String verifyYourPhone = "Verifique Seu Número de Telefone";
 
-  static const String ratting = "Ratting";
+  static const String codeHasBeenSendTo = "O código foi enviado para";
 
-  static const String pendingRides = "Pending Rides";
+  static const String reviewMsgHintText = "escreva sua experiência de viagem";
+
+  static const String ratting = "Avaliação"; // Corrigido de "Ratting" para "Rating"
+
+  static const String pendingRides = "Viagens Pendentes";
 
   static const String km = "km";
 
-  static const String viewMap = "View map";
+  static const String viewMap = "Ver mapa";
 
-  static const String bidNOW = "Bid now";
+  static const String bidNOW = "Ofertar agora";
 
-  static const String bidList = "Bid List";
-  static const String NoBidFound = "No bid found";
+  static const String bidList = "Lista de Ofertas";
 
-  static const String vehicleVerificationSubTitle = "Kindly provide the following information to complete your vehicle verification process. Your cooperation ensures a safe and reliable ride-sharing experience for both you and your passengers. Thank you!";
+  static const String NoBidFound = "Nenhuma oferta encontrada";
 
-  static const String noRideFoundInYourArea = "No ride found in your area";
+  static const String vehicleVerificationSubTitle = "Por favor, forneça as seguintes informações para completar o processo de verificação do seu veículo. Sua cooperação garante uma experiência de compartilhamento de viagens segura e confiável para você e seus passageiros. Obrigado!";
 
-  static const String noRideFound = "No ride found";
+  static const String noRideFoundInYourArea = "Nenhuma viagem encontrada em sua área";
 
-  static const String noActiveRideFound = "No active ride found";
+  static const String noRideFound = "Nenhuma viagem encontrada";
 
-  static const String noRunningRideFound = "No running ride found";
+  static const String noActiveRideFound = "Nenhuma viagem ativa encontrada";
 
-  static const String noCompletedRideFound = "No completed ride found";
+  static const String noRunningRideFound = "Nenhuma viagem em andamento encontrada";
 
-  static const String to = "to";
+  static const String noCompletedRideFound = "Nenhuma viagem concluída encontrada";
 
-  static const String sorryThereIsNoNewRideFound = "Sorry there is no new ride found";
+  static const String to = "para";
 
-  static const String sorryThereIsNoCompleteRideFound = "Sorry there is no complete ride found";
+  static const String sorryThereIsNoNewRideFound = "Desculpe, não há novas viagens encontradas";
 
-  static const String sorryThereIsNoCanceledRideFound = "Sorry there is no cancel ride found";
+  static const String sorryThereIsNoCompleteRideFound = "Desculpe, não há viagens concluídas encontradas";
 
-  static const String sorryThereIsNoActiveRideFound = "Sorry there is no active ride found";
+  static const String sorryThereIsNoCanceledRideFound = "Desculpe, não há viagens canceladas encontradas";
 
-  static const String sorryThereIsNoPendingRideFound = "Sorry there is no pending ride found";
+  static const String sorryThereIsNoActiveRideFound = "Desculpe, não há viagens ativas encontradas";
 
-  static const String pleaseEnterMinimum = "Please enter minimum";
+  static const String sorryThereIsNoPendingRideFound = "Desculpe, não há viagens pendentes encontradas";
 
-  static const String endRide = "End Ride";
+  static const String pleaseEnterMinimum = "Por favor, insira o mínimo";
 
-  static const String paymentReceived = "Payment received";
+  static const String endRide = "Encerrar Viagem";
 
-  static const String distanceAway = "Distance away";
+  static const String paymentReceived = "Pagamento recebido";
 
-  static const String distance = "Distance";
+  static const String distanceAway = "Distância";
 
-  static const String estimatedDuration = "Estimated duration";
+  static const String distance = "Distância";
 
-  static const String duration = "Duration";
+  static const String estimatedDuration = "Duração estimada";
 
-  static const String rideFare = "Ride fare";
+  static const String duration = "Duração";
 
-  static const String referFriendTitle = "Invite to sign up using your link and you will get";
+  static const String rideFare = "Tarifa da viagem";
 
-  static const String yourReferences = "Your references";
+  static const String referFriendTitle = "Convide para se inscrever usando seu link e você receberá";
 
-  static const String cashPayment = "Cash Payment";
+  static const String yourReferences = "Suas referências";
 
-  static const String cash = "Cash";
+  static const String cashPayment = "Pagamento em Dinheiro";
 
-  static const String onlinePayment = "Online Payment";
+  static const String cash = "Dinheiro";
 
-  static const String payFromWallet = "Pay from wallet";
+  static const String onlinePayment = "Pagamento Online";
 
-  static const String pleaseUploadYourAppOnPlayStore = "Please upload your app on play store";
+  static const String payFromWallet = "Pagar da carteira";
 
-  static const String nA = "N/A";
+  static const String pleaseUploadYourAppOnPlayStore = "Por favor, faça upload do seu aplicativo na Play Store";
 
-  static const String person = "Person";
+  static const String nA = "N/D";
 
-  static const String reFerred = "Referred";
+  static const String person = "Pessoa";
 
-  static const String interCityRides = "Inter City Rides";
+  static const String reFerred = "Indicado";
+
+  static const String interCityRides = "Viagens Intermunicipais";
 
   static const String gateway = "Gateway";
 
-  static const String searching = "Searching";
+  static const String searching = "Procurando";
 
-  static const String noReferralUsers = "No referral users";
+  static const String noReferralUsers = "Nenhum usuário indicado";
 
-  static const String pleaseAcceptDriverBeforeCall = "Please accept driver before call";
+  static const String pleaseAcceptDriverBeforeCall = "Por favor, aceite o motorista antes de ligar";
 
-  static const String pleaseAcceptDriverBeforeChat = "Please accept driver before chat";
+  static const String pleaseAcceptDriverBeforeChat = "Por favor, aceite o motorista antes de conversar";
 
-  static const String howManyOfYouWillGo = "How many people will be going?";
+  static const String howManyOfYouWillGo = "Quantas pessoas irão?";
 
-  static const String enterCouponCode = "Enter coupon Code";
+  static const String enterCouponCode = "Insira o código do cupom";
 
-  static const String youDontHaveAnyRideYet = "You don't have any ride yet.";
+  static const String youDontHaveAnyRideYet = "Você ainda não tem nenhuma viagem.";
 
-  static const String rideRulse = "Ride rules";
+  static const String rideRulse = "Regras da viagem";
 
-  static const String carRules = "Car rules";
+  static const String carRules = "Regras do carro";
 
-  static const String errorLocation = "Something went wrong while Taking Location";
+  static const String errorLocation = "Algo deu errado ao obter a localização";
 
-  static const String createARequest = "Create a request";
+  static const String createARequest = "Criar uma solicitação";
 
-  static const String missYouHeres = "Miss you! here`s";
+  static const String missYouHeres = "Saudades! aqui está";
 
-  static const String noServiceAvailable = "No service available";
+  static const String noServiceAvailable = "Nenhum serviço disponível";
 
-  static const String additionalInformation = "Additional information";
+  static const String additionalInformation = "Informações adicionais";
 
-  static const String pleaseSelectYourPickupAndDestinationLocation = "Please select your pickup and destination location";
+  static const String pleaseSelectYourPickupAndDestinationLocation = "Por favor, selecione seu local de embarque e destino";
 
-  static const String additionalInformationHint = "Write your additional information";
+  static const String additionalInformationHint = "Escreva suas informações adicionais";
 
-  static const String cancelationReason = "Write your cancellation reason...";
+  static const String cancelationReason = "Escreva o motivo do cancelamento...";
 
-  static const String findingDrivers = "Finding drivers";
+  static const String findingDrivers = "Procurando motoristas";
 
   static const String faq = "FAQ";
 
-  static const String noFileChosen = 'No file chosen';
+  static const String noFileChosen = "Nenhum arquivo escolhido";
 
-  static const String yourMessage = 'Your Message';
+  static const String yourMessage = "Sua Mensagem";
 
-  static const String rideCanceled = 'Ride Canceled';
+  static const String rideCanceled = "Viagem Cancelada";
 
-  static const String waitForDriverResponse = 'Wait for driver response';
+  static const String waitForDriverResponse = "Aguarde a resposta do motorista";
 
-  static const String ticketDetails = 'Ticket Details';
+  static const String ticketDetails = "Detalhes do Ticket";
 
-  static const String ticket = 'Ticket';
+  static const String ticket = "Ticket";
 
-  static const String yourReply = 'Your Reply';
+  static const String yourReply = "Sua Resposta";
 
-  static const String reply = 'Reply';
+  static const String reply = "Responder";
 
-  static const String attachments = 'Attachments';
+  static const String attachments = "Anexos";
 
-  static const String postedOn = 'Posted on';
+  static const String postedOn = "Postado em";
 
-  static const String answered = 'Answered';
+  static const String answered = "Respondido";
 
-  static const String open = 'Open';
+  static const String open = "Aberto";
 
-  static const String replied = 'Replied';
+  static const String replied = "Respondido";
 
-  static const String closed = 'Closed';
+  static const String closed = "Fechado";
 
-  static const String close = 'Close';
+  static const String close = "Fechar";
 
-  static const String addNewTicket = 'Create Ticket';
+  static const String addNewTicket = "Criar Ticket";
 
-  static const String emailAddress = "Email Address";
+  static const String emailAddress = "Endereço de Email";
 
-  static const String subject = 'Subject';
+  static const String subject = "Assunto";
 
-  static const String enterYourSubject = 'Enter your subject';
+  static const String enterYourSubject = "Insira seu assunto";
 
-  static const String priority = 'Priority';
+  static const String priority = "Prioridade";
 
-  static const String typeHere = 'Type here';
+  static const String typeHere = "Digite aqui";
 
-  static const String help = 'Help';
+  static const String help = "Ajuda";
 
-  static const String enterYourMessage = 'Enter your message';
+  static const String enterYourMessage = "Insira sua mensagem";
 
-  static const String subjectRequired = 'Subject is required';
+  static const String subjectRequired = "Assunto é obrigatório";
 
-  static const String messageRequired = 'Message is required';
+  static const String messageRequired = "Mensagem é obrigatória";
 
-  static const String high = 'High';
+  static const String high = "Alta";
 
-  static const String medium = 'Medium';
+  static const String medium = "Média";
 
-  static const String low = 'Low';
+  static const String low = "Baixa";
 
-  static const String contactUs = 'Contact Us';
+  static const String contactUs = "Contate-nos";
 
-  static const String supportTicket = 'Support Ticket';
+  static const String supportTicket = "Ticket de Suporte";
 
-  static const String ourCommunityGroup = 'Our community group';
+  static const String ourCommunityGroup = "Nosso grupo comunitário";
 
-  static const String complaintBox = 'Complaint Box';
+  static const String complaintBox = "Caixa de Reclamações";
 
-  static const String lastReply = 'Last Reply';
+  static const String lastReply = "Última Resposta";
 
-  static const String replyTicket = "Ticket Details";
+  static const String replyTicket = "Detalhes do Ticket";
 
-  static const String customerReply = "Customer Reply";
+  static const String customerReply = "Resposta do Cliente";
 
-  static const String repliedSuccessfully = "Replied successfully";
+  static const String repliedSuccessfully = "Respondido com sucesso";
 
-  static const String notifications = 'Notifications';
+  static const String notifications = "Notificações";
 
-  static const String noTicketFound = "No Ticket Found";
+  static const String noTicketFound = "Nenhum Ticket Encontrado";
 
-  static const String noMSgFound = "No Message Found";
+  static const String noMSgFound = "Nenhuma Mensagem Encontrada";
 
-  static const String you = "You";
+  static const String you = "Você";
 
   static const String admin = "Admin";
 
-  static const String replyTicketEmptyMsg = "Message can't be empty";
+  static const String replyTicketEmptyMsg = "A mensagem não pode estar vazia";
 
-  static const String ticketCreateSuccessfully = 'Ticket created successfully';
+  static const String ticketCreateSuccessfully = "Ticket criado com sucesso";
 
-  static const String cancelTicketMessage = 'Are you sure you want to close the ticket';
+  static const String cancelTicketMessage = "Você tem certeza de que deseja fechar o ticket";
 
-  static const String enterFile = "Enter file";
+  static const String enterFile = "Inserir arquivo";
 
-  static const String upload = 'upload';
+  static const String upload = "upload";
 
-  static const String supportedFileHint = "Supported file type:jpg,xlxs,pdf";
+  static const String supportedFileHint = "Tipo de arquivo suportado: jpg, xlxs, pdf";
 
-  static const String areYouSureReject = "Are you sure want to\nreject?";
+  static const String areYouSureReject = "Você tem certeza de que deseja\nrejeitar?";
 
-  static const String reject = "Reject";
+  static const String reject = "Rejeitar";
 
-  static const String requestFrom = "Request from";
+  static const String requestFrom = "Solicitação de";
 
-  static const String successFullSentMoneyRequest = "Successfully Sent Money Request";
+  static const String successFullSentMoneyRequest = "Solicitação de Dinheiro Enviada com Sucesso";
 
-  static const String requestMoneyNote = "Enter Your Massage";
+  static const String requestMoneyNote = "Insira Sua Mensagem";
 
-  static const String userMessage = "User Massage";
+  static const String userMessage = "Mensagem do Usuário";
 
-  static const String imgDownloadMsg = "Successfully image downloaded";
-  static const String imagePreview = "Image Preview";
+  static const String imgDownloadMsg = "Imagem baixada com sucesso";
 
-  static const String closeTicketWarningTxt = 'Are you sure you want to close this ticket';
+  static const String imagePreview = "Pré-visualização da Imagem";
 
-  static const String pending = "Pending";
+  static const String closeTicketWarningTxt = "Você tem certeza de que deseja fechar este ticket";
 
-  static const String completed = "Completed";
+  static const String pending = "Pendente";
 
-  static const String active = "Active";
+  static const String completed = "Concluído";
 
-  static const String running = "Running";
+  static const String active = "Ativo";
 
-  static const String canceled = "Canceled";
+  static const String running = "Em Andamento";
 
-  static const String paid = "Paid";
+  static const String canceled = "Cancelado";
 
-  static const String unpaid = "Unpaid";
+  static const String paid = "Pago";
 
-  static const String completeProfile = "Complete Profile";
+  static const String unpaid = "Não Pago";
 
-  static const String accept = "Accept";
+  static const String completeProfile = "Completar Perfil";
 
-  static const String decline = "Decline";
+  static const String accept = "Aceitar";
 
-  static const String hide = "Hide";
+  static const String decline = "Recusar";
 
-  static const String show = "Show";
+  static const String hide = "Ocultar";
 
-  static const String soundNotification = "Sound Notification";
+  static const String show = "Mostrar";
 
-  static const String regTerm = "I have read & agree to the";
+  static const String soundNotification = "Notificação Sonora";
 
-  static const String maintenanceTitle = "We're Down For Maintenance";
+  static const String regTerm = "Li e concordo com os";
 
-  static const String maintenanceSubtitle = "Application is now undergoing maintenance and will be back soon";
+  static const String maintenanceTitle = "Estamos em Manutenção";
 
-  static const String deleteYourAccount = "Delete Your Account";
+  static const String maintenanceSubtitle = "O aplicativo está em manutenção e voltará em breve";
 
-  static const String deleteBottomSheetSubtitle = 'You will lose all of your data by deleting your account. This action cannot be undone.';
+  static const String deleteYourAccount = "Deletar Sua Conta";
 
-  static const String yourAverageRatingIs = "Your average rating is";
-  static const String averageRatingIs = "Average rating is";
-  static const String driverReviews = "Driver reviews";
-  static const String myReviews = "My reviews";
-  static const String driver = "Driver";
-  static const String vehicle = "Vehicle";
-  static const String driverInformation = "Driver Information";
-  static const String vehicleInformation = "Vehicle Information";
-  static const String carInfo = "Car Info";
+  static const String deleteBottomSheetSubtitle = "Ao deletar sua conta, você perderá todos os seus dados. Esta ação não pode ser desfeita.";
+
+  static const String yourAverageRatingIs = "Sua avaliação média é";
+
+  static const String averageRatingIs = "Avaliação média é";
+
+  static const String driverReviews = "Avaliações do Motorista";
+
+  static const String myReviews = "Minhas avaliações";
+
+  static const String driver = "Motorista";
+
+  static const String vehicle = "Veículo";
+
+  static const String driverInformation = "Informações do Motorista";
+
+  static const String vehicleInformation = "Informações do Veículo";
+
+  static const String carInfo = "Informações do Carro";
+
   static const String apple = "Apple";
 
-  static const String runningRideAlertTitle = "Complete your ride";
-  static const String runningRideAlertSubTitle = "You've reached your destination. Please confirm to end the ride";
+  static const String runningRideAlertTitle = "Conclua sua viagem";
+
+  static const String runningRideAlertSubTitle = "Você chegou ao seu destino. Por favor, confirme para encerrar a viagem";
 
   static List<MyLanguageModel> myLanguages = [
     MyLanguageModel(
