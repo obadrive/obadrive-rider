@@ -15,7 +15,7 @@ class Environment {
   //MAP CONFIG
   static const bool addressPickerFromMapApi = true; //If true, use Google Map API for formate address picker from lat , long, else use free service reverse geocode
 
-  static const String mapKey = "AIzaSyBX5yUaGtRRwY7cGQKtwNsDtQBFdJtmuIs";
+  static const String mapKey = "AIzaSyAo_I1ZYSkA8xxMhnvuUw1PmuiGQ6OyQcQ";
   static const double mapDefaultZoom = 16;
   static const String devToken = "\$2y\$12\$mEVBW3QASB5HMBv8igls3ejh6zw2A0Xb480HWAmYq6BY9xEifyBjG";
 }

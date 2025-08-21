@@ -117,25 +117,40 @@ class SelectLocationController extends GetxController {
 
   /// Generate polyline for the route between pickup and destination
   Future<void> _generateRoutePolyline() async {
-    final points = await getPolylinePoints();
-    polylineCoordinates = points;
-    generatePolyLineFromPoints(points);
-    // fitPolylineBounds(points);
-    fitPolylineInTopHalf(points);
+    printX('=== DEBUG: _generateRoutePolyline chamado ===');
+    printX('Pickup: $pickupLatlong');
+    printX('Destination: $destinationLatlong');
+    
+    try {
+      final points = await getPolylinePoints();
+      printX('✅ Pontos obtidos: ${points.length}');
+      
+      polylineCoordinates = points;
+      generatePolyLineFromPoints(points);
+      
+      if (points.isNotEmpty) {
+        fitPolylineInTopHalf(points);
+        printX('✅ Rota ajustada no mapa');
+      } else {
+        printX('⚠️ Nenhum ponto para ajustar no mapa');
+      }
 
-    // Uncomment to enable animated polyline
-    /*
-    animator.animatePolyline(
-      v,
-      'polyline_id',
-      MyColor.colorYellow,
-      MyColor.primaryColor,
-      polylines,
-      () {
-        update();
-      },
-    );
-    */
+      // Uncomment to enable animated polyline
+      /*
+      animator.animatePolyline(
+        v,
+        'polyline_id',
+        MyColor.colorYellow,
+        MyColor.primaryColor,
+        polylines,
+        () {
+          update();
+        },
+      );
+      */
+    } catch (e) {
+      printX('❌ ERRO em _generateRoutePolyline: $e');
+    }
   }
 
   /// Check and request location permissions
@@ -242,37 +257,54 @@ class SelectLocationController extends GetxController {
 
   /// Open the map and get address from coordinates
   Future<void> openMap(double latitude, double longitude) async {
+    printX('=== DEBUG: openMap chamado ===');
+    printX('Latitude: $latitude');
+    printX('Longitude: $longitude');
+    printX('SelectedLocationIndex: $selectedLocationIndex');
+    
     try {
       String address = '';
 
       // Reverse geocoding
       if (Environment.addressPickerFromMapApi) {
+        printX('🔄 Usando API externa para geocoding reverso...');
         // Use external API (e.g., Google)
         address = await locationSearchRepo.getFormattedAddress(latitude, longitude) ?? '';
+        printX('✅ Endereço obtido via API: $address');
       } else {
+        printX('🔄 Usando geocoding local...');
         // Use local reverse geocoding
         final placemarks = await placemarkFromCoordinates(latitude, longitude);
         if (placemarks.isNotEmpty) {
           address = _formatAddress(placemarks.first);
+          printX('✅ Endereço obtido via geocoding local: $address');
         }
       }
 
       // Update address value
       currentAddress.value = address;
       update();
+      
       // Update the appropriate controller based on index
       final bool useSearchedAddress = selectedAddressFromSearch.isNotEmpty && Get.currentRoute != RouteHelper.editLocationPickUpScreen;
       final String displayAddress = useSearchedAddress ? selectedAddressFromSearch : currentAddress.value;
+      
+      printX('Endereço final: $displayAddress');
 
       if (selectedLocationIndex == 0) {
+        printX('🔄 Atualizando pickup location...');
         pickUpController.text = displayAddress;
         pickupLatlong = LatLng(latitude, longitude);
+        printX('✅ Pickup atualizado: $pickupLatlong');
       } else {
+        printX('🔄 Atualizando destination location...');
         destinationController.text = displayAddress;
         destinationLatlong = LatLng(latitude, longitude);
+        printX('✅ Destination atualizado: $destinationLatlong');
       }
 
       // Add or update location in homeController
+      printX('🔄 Adicionando localização ao homeController...');
       homeController.addLocationAtIndex(
         SelectedLocationInfo(
           latitude: latitude,
@@ -281,13 +313,20 @@ class SelectLocationController extends GetxController {
         ),
         selectedLocationIndex,
       );
+      printX('✅ Localização adicionada ao homeController');
 
       // Generate route polyline if both pickup and destination are set
       if (pickupLatlong.latitude != 0 && destinationLatlong.latitude != 0) {
+        printX('🔄 Gerando rota entre pickup e destination...');
         await _generateRoutePolyline();
+        printX('✅ Rota gerada com sucesso');
+      } else {
+        printX('⚠️ Não foi possível gerar rota - coordenadas incompletas');
+        printX('Pickup: $pickupLatlong');
+        printX('Destination: $destinationLatlong');
       }
     } catch (e) {
-      printX("Error getting address: ${e.toString()}");
+      printX('❌ ERRO em openMap: ${e.toString()}');
       animateMapCameraPosition();
     }
   }
@@ -437,6 +476,11 @@ class SelectLocationController extends GetxController {
 
   /// Get polyline points for route between pickup and destination
   Future<List<LatLng>> getPolylinePoints() async {
+    printX('=== DEBUG: getPolylinePoints (SelectLocationController) ===');
+    printX('Origem: ${pickupLatlong.latitude}, ${pickupLatlong.longitude}');
+    printX('Destino: ${destinationLatlong.latitude}, ${destinationLatlong.longitude}');
+    printX('API Key configurada: ${Environment.mapKey.isNotEmpty}');
+    
     List<LatLng> points = [];
 
     try {
@@ -453,15 +497,21 @@ class SelectLocationController extends GetxController {
         googleApiKey: Environment.mapKey,
       );
 
+      printX('Status da resposta: ${result.status}');
+      printX('Mensagem de erro: ${result.errorMessage}');
+      printX('Número de pontos: ${result.points.length}');
+
       if (result.points.isNotEmpty) {
         for (var point in result.points) {
           points.add(LatLng(point.latitude, point.longitude));
         }
+        printX('✅ Polyline criado com ${points.length} pontos');
       } else {
-        printX("Polyline error: ${result.errorMessage}");
+        printX("❌ Polyline error: ${result.errorMessage}");
+        printX("Status: ${result.status}");
       }
     } catch (e) {
-      printX("Error getting polyline: ${e.toString()}");
+      printX("❌ Error getting polyline: ${e.toString()}");
     }
 
     return points;

@@ -49,7 +49,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAlr1yhXQkzC49cLhB7xC8SValIINAI28E',
+    apiKey: 'AIzaSyAo_I1ZYSkA8xxMhnvuUw1PmuiGQ6OyQcQ',
     appId: '1:476856846993:android:ab4ac4b547348f89fb0d30',
     messagingSenderId: '476856846993',
     projectId: 'obadrive-102a6',

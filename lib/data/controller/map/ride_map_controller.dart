@@ -40,30 +40,52 @@ class RideMapController extends GetxController {
     required LatLng destination,
     bool? isRunning = false,
   }) async {
+    printX('=== DEBUG: loadMap chamado ===');
+    printX('Pickup: $pickup');
+    printX('Destination: $destination');
+    printX('IsRunning: $isRunning');
+    
+    // Verificar se as coordenadas são válidas
+    if (pickup.latitude == 0 && pickup.longitude == 0) {
+      printX('❌ ERRO: Coordenadas de pickup inválidas (0,0)');
+      return;
+    }
+    
+    if (destination.latitude == 0 && destination.longitude == 0) {
+      printX('❌ ERRO: Coordenadas de destino inválidas (0,0)');
+      return;
+    }
+    
     pickupLatLng = pickup;
     destinationLatLng = destination;
     update();
-    getPolyLinePoints().then((data) {
+    
+    try {
+      printX('🔄 Iniciando busca de polyline...');
+      final data = await getPolyLinePoints();
+      printX('✅ Polyline obtido com ${data.length} pontos');
+      
       polylineCoordinates = data;
       generatePolyLineFromPoints(data);
       fitPolylineBounds(data);
-      // animator.animatePolyline(
-      //   data,
-      //   'polyline_id',
-      //   MyColor.colorYellow,
-      //   MyColor.primaryColor,
-      //   polyLines,
-      //   () {
-      //     update();
-      //   },
-      // );
-    });
-    await setCustomMarkerIcon();
+      
+      printX('✅ Mapa carregado com sucesso');
+    } catch (e) {
+      printX('❌ ERRO ao carregar mapa: $e');
+    }
+    
+    try {
+      await setCustomMarkerIcon();
+      printX('✅ Ícones de marcadores carregados');
+    } catch (e) {
+      printX('❌ ERRO ao carregar ícones: $e');
+    }
   }
 
   // map controller
   GoogleMapController? mapController;
   void animateMapCameraPosition() {
+    printX('🔄 Animando câmera para pickup: $pickupLatLng');
     mapController?.animateCamera(
       CameraUpdate.newCameraPosition(
         CameraPosition(
@@ -76,42 +98,69 @@ class RideMapController extends GetxController {
 
   //
   void generatePolyLineFromPoints(List<LatLng> polylineCoordinates) async {
+    printX('🔄 Gerando polyline com ${polylineCoordinates.length} pontos');
     isLoading = true;
     update();
-    PolylineId id = const PolylineId("poly");
-    Polyline polyline = Polyline(
-      polylineId: id,
-      color: MyColor.getPrimaryColor(),
-      points: polylineCoordinates,
-      width: 3,
-    );
-    polyLines[id] = polyline;
+    
+    try {
+      PolylineId id = const PolylineId("poly");
+      Polyline polyline = Polyline(
+        polylineId: id,
+        color: MyColor.getPrimaryColor(),
+        points: polylineCoordinates,
+        width: 3,
+      );
+      polyLines[id] = polyline;
+      printX('✅ Polyline gerado com sucesso');
+    } catch (e) {
+      printX('❌ ERRO ao gerar polyline: $e');
+    }
+    
     isLoading = false;
     update();
   }
 
   List<LatLng> polylineCoordinates = [];
   Future<List<LatLng>> getPolyLinePoints() async {
+    printX('🔄 Iniciando getPolyLinePoints...');
+    printX('Origem: ${pickupLatLng.latitude}, ${pickupLatLng.longitude}');
+    printX('Destino: ${destinationLatLng.latitude}, ${destinationLatLng.longitude}');
+    printX('API Key: ${Environment.mapKey.isNotEmpty ? "Configurada" : "NÃO CONFIGURADA"}');
+    
     List<LatLng> polylineCoordinates = [];
-    PolylinePoints polylinePoints = PolylinePoints();
-    PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-      request: PolylineRequest(
-        origin: PointLatLng(pickupLatLng.latitude, pickupLatLng.longitude),
-        destination: PointLatLng(
-          destinationLatLng.latitude,
-          destinationLatLng.longitude,
+    
+    try {
+      PolylinePoints polylinePoints = PolylinePoints();
+      PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
+        request: PolylineRequest(
+          origin: PointLatLng(pickupLatLng.latitude, pickupLatLng.longitude),
+          destination: PointLatLng(
+            destinationLatLng.latitude,
+            destinationLatLng.longitude,
+          ),
+          mode: TravelMode.driving,
         ),
-        mode: TravelMode.driving,
-      ),
-      googleApiKey: Environment.mapKey,
-    );
-    if (result.points.isNotEmpty) {
-      for (var point in result.points) {
-        polylineCoordinates.add(LatLng(point.latitude, point.longitude));
+        googleApiKey: Environment.mapKey,
+      );
+      
+      printX('Status da resposta: ${result.status}');
+      printX('Mensagem de erro: ${result.errorMessage}');
+      printX('Número de pontos: ${result.points.length}');
+      
+      if (result.points.isNotEmpty) {
+        for (var point in result.points) {
+          polylineCoordinates.add(LatLng(point.latitude, point.longitude));
+        }
+        printX('✅ Polyline criado com ${polylineCoordinates.length} pontos');
+      } else {
+        printX('❌ ERRO: Nenhum ponto retornado pela API');
+        printX('Mensagem de erro: ${result.errorMessage}');
+        printX('Status: ${result.status}');
       }
-    } else {
-      printX(result.errorMessage);
+    } catch (e) {
+      printX('❌ ERRO na requisição de polyline: $e');
     }
+    
     return polylineCoordinates;
   }
 
@@ -125,6 +174,11 @@ class RideMapController extends GetxController {
     required LatLng destination,
     LatLng? driverLatLng,
   }) {
+    printX('🔄 Gerando marcadores...');
+    printX('Pickup: $pickup');
+    printX('Destination: $destination');
+    printX('Driver: $driverLatLng');
+    
     return {
       if (driverLatLng != null) ...[
         Marker(
@@ -194,12 +248,30 @@ class RideMapController extends GetxController {
   }
 
   Future<void> setCustomMarkerIcon() async {
-    pickupIcon = await Helper.getBytesFromAsset(MyImages.mapPickup, 80);
-    destinationIcon = await Helper.getBytesFromAsset(
-      MyImages.mapDestination,
-      80,
-    );
-    driverIcon = await Helper.getBytesFromAsset(MyImages.mapDriver, 80);
+    printX('🔄 Carregando ícones de marcadores...');
+    try {
+      pickupIcon = await Helper.getBytesFromAsset(MyImages.mapPickup, 80);
+      printX('✅ Ícone de pickup carregado');
+    } catch (e) {
+      printX('❌ ERRO ao carregar ícone de pickup: $e');
+    }
+    
+    try {
+      destinationIcon = await Helper.getBytesFromAsset(
+        MyImages.mapDestination,
+        80,
+      );
+      printX('✅ Ícone de destino carregado');
+    } catch (e) {
+      printX('❌ ERRO ao carregar ícone de destino: $e');
+    }
+    
+    try {
+      driverIcon = await Helper.getBytesFromAsset(MyImages.mapDriver, 80);
+      printX('✅ Ícone de motorista carregado');
+    } catch (e) {
+      printX('❌ ERRO ao carregar ícone de motorista: $e');
+    }
   }
 
   String driverAddress = 'Loading...';
@@ -220,8 +292,12 @@ class RideMapController extends GetxController {
   }
 
   void fitPolylineBounds(List<LatLng> coords) {
-    if (coords.isEmpty) return;
+    if (coords.isEmpty) {
+      printX('❌ ERRO: Tentativa de ajustar bounds com coordenadas vazias');
+      return;
+    }
 
+    printX('🔄 Ajustando bounds para ${coords.length} coordenadas');
     LatLngBounds bounds = _createLatLngBounds(coords);
     mapController?.animateCamera(CameraUpdate.newLatLngBounds(bounds, 50));
   }

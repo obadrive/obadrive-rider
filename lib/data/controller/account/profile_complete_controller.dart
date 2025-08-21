@@ -172,15 +172,8 @@ void selectCity(String city) {
   update();
 }
 
-  // City selection variables
-  String selectedCity = '';
-  List<String> cityList = ['Amazonas', 'Pará'];
-  
-  void selectCity(String city) {
-    selectedCity = city;
-    cityController.text = city;
-    update();
-  }
+
+
 
   bool submitLoading = false;
   Future<void> updateProfile() async {
